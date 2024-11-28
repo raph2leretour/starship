@@ -36,7 +36,7 @@ format = '[$path/]($style)'
 truncation_symbol = '.../'
 
 [git_branch]
-format = '[ on branch \[[$branch]($style)\]](bold $bone)'
+format = '[-\[[$branch]($style)\]](bold $bone)'
 
 [git_status]
 format = '[($all_status$ahead_behind)]($style)'
