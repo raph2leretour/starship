@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = true
-format = """[╔ $username[@]($bone bolde)$hostname $fill╗](bold black)
+format = """[╔ $username[@]($bone bolde)$hostname $fill $cmd_duration ╗](bold black)
 [╠═ $directory$git_branch$git_status $fill$time═╝](bold black)
 [╚══ $status$character](bold black)"""
 
@@ -11,9 +11,9 @@ palette = 'rtissera'
 bone = '#ECE2D0'
 
 [cmd_duration]
-format = '[$duration]($style)'
+format = '[took $duration]($style)'
 show_milliseconds = true
-min_time = 500
+min_time = 0
 
 [fill]
 symbol = '═'
@@ -30,10 +30,10 @@ show_always = true
 [hostname]
 ssh_only = false
 format = '[$hostname]($style)'
- 
+
 [directory]
 format = '[$path/]($style)'
-truncation_symbol = '.../'
+truncation_symbol = '…/'
 
 [git_branch]
 format = '[-\[[$branch]($style)\]](bold $bone)'
